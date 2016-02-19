@@ -1,0 +1,28 @@
+<script>
+
+
+    function update() {
+        for (var i = 0; i < blocks.length; i++) {
+            blocks[i].y += 10;
+            removeBlock(i);
+        }
+        if (updateCount % 30 == 0) {
+            addBlock();
+        }
+        if (isCollidingMouse(blocks[i]) == true) {
+            document.getElementById("hit").innerHTML = "YOU LOSE";
+
+        }
+
+
+    }
+
+
+    function removeBlock(i) {
+        if (blocks[i].y == 580) {
+            document.getElementById("game").removeChild(blocks[i].element);
+            blocks.splice(i, 1);
+        }
+
+    }
+</script>
